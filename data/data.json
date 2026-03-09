@@ -1,0 +1,89 @@
+{
+    "Municipio":[
+        "MUNICIPIO: RJ - Belford Roxo",
+        "MUNICIPIO: RJ - Duque de Caxias",
+        "MUNICIPIO: RJ - Itaguaí",
+        "MUNICIPIO: RJ - Japeri",
+        "MUNICIPIO: RJ - Magé",
+        "MUNICIPIO: RJ - Mesquita",
+        "MUNICIPIO: RJ - Nilópolis",
+        "MUNICIPIO: RJ - Nova Iguaçu",
+        "MUNICIPIO: RJ - Paracambi",
+        "MUNICIPIO: RJ - Queimados",
+        "MUNICIPIO: RJ - São João de Meriti",
+        "MUNICIPIO: RJ - Seropédica"
+    ],
+    "Pediatrico": {
+        "procedimentos": {
+            "Pacotes": {
+                "PACOTE PRÉ-OPERATÓRIO PEDIÁTRICO OTORRINO": {
+                    "codigo": "0301010072",
+                    "valor": 300
+                },
+                "PACOTE PRÉ-OPERATÓRIO PEDIÁTRICO CIRURGIA GERAL": {
+                    "codigo": "0301010072",
+                    "valor": 300
+                },
+                "PACOTE PRÉ-OPERATÓRIO PEDIÁTRICO OFTALMOLOGISTA": {
+                    "codigo": "0301010072",
+                    "valor": 300
+                },
+                "PACOTE RISCO CIRURGICO PEDIÁTRICO": {
+                    "codigo": "0301010072",
+                    "valor": 300
+                }
+            },
+
+            "Cirurgias": {
+                "ADENOIDECTOMIA PEDIÁTRICO": {
+                    "codigo": "0404010016",
+                    "valor": 5330
+                },
+                "AMIGDALECTOMIA- PEDIATRICO": {
+                    "codigo": "0404010024",
+                    "valor": 6713.01
+                },
+                "AMIGDALECTOMIA COM ADENOIDECTOMIA - PEDIATRICO": {
+                    "codigo": "0404010032",
+                    "valor": 7698.35
+                },
+                "TRATAMENTO CIRÚRGICO DE PERFURAÇÃO DO SEPTO NASAL  - PEDIATRICO": {
+                    "codigo": "0404010504",
+                    "valor": 6500
+                },
+                "CORREÇÃO CIRÚRGICA DE ESTRABISMO (ACIMA DE 2 MUSCULOS) - PEDIATRICO": {
+                    "codigo": "0405020015",
+                    "valor": 5255.28
+                },
+                "HERNIOPLASTIA INGUINAL (BILATERAL) - PEDIATRICO": {
+                    "codigo": "0407040099",
+                    "valor": 5850
+                },
+                "HERNIOPLASTIA UMBILICAL - PEDIATRICO": {
+                    "codigo": "0407040129",
+                    "valor": 5237.06
+                },
+                "ORQUIDOPEXIA BILATERAL - PEDIATRICO": {
+                    "codigo": "0409040126",
+                    "valor": 7157.78
+                },
+                "TRATAMENTO CIRÚRGICO DE HIDROCELE- PEDIATRICO": {
+                    "codigo": "0409040215",
+                    "valor": 3782.7
+                },
+                "CORRECAO DE HIPOSPADIA (1º TEMPO) - PEDIATRICO": {
+                    "codigo": "0409050032",
+                    "valor": 6608.86
+                },
+                "PLASTICA TOTAL DO PENIS - PEDIATRICO": {
+                    "codigo": "0409050075",
+                    "valor": 6500
+                },
+                "POSTECTOMIA - PEDIATRICO": {
+                    "codigo": "0409050083",
+                    "valor": 4850
+                }
+            }
+        }
+    }
+}
