@@ -11,7 +11,7 @@ def transform_data(raw_file_path):
     data["Celular"] = data["Celular"].str.replace('-', '').str.replace(' ', '').str.replace('(', '').str.replace(')', '')
     
     data["Data / Hora"] = data["Data / Hora"].str.split(' ').str[0]
-    data["Data / Hora"] = pd.to_datetime(data["Data / Hora"], format='%d/%m/%Y')
+    data["Data / Hora"] = pd.to_datetime(data["Data / Hora"], format='%d/%m/%Y', errors='coerce')
 
     data = data.rename(columns={
         "Paciente": "paciente",
