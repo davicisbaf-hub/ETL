@@ -1,4 +1,4 @@
-Paciente,Celular,Procedimento,Data / Hora,Prestador,Profissional,Município,UBS,Valor regional,Valor SUS,Contraste,Sedação,Valor total
+paciente,celular,procedimento,data_hora,prestador,profissional,municipio,ubs,valor_regional,valor_sus,contraste,sedacao,valor_total
 leticia carneiro de oliveira,21981261843,0404010016 - ADENOIDECTOMIA PEDIÁTRICO,2025-11-19,Neotin Neonatal Terapia Intensiva Ltda,MARIANNA ORNELLAS SAMPAIO LEITE,Mesquita,,"R$ 4.250,90","R$ 1.079,10","R$ 0,00","R$ 0,00","R$ 5.330,00"
 leonardo de barros braga,21965990210,0404010016 - ADENOIDECTOMIA PEDIÁTRICO,2025-11-19,Neotin Neonatal Terapia Intensiva Ltda,MARIANNA ORNELLAS SAMPAIO LEITE,Mesquita,,"R$ 4.250,90","R$ 1.079,10","R$ 0,00","R$ 0,00","R$ 5.330,00"
 ruan miguel da silva pinheiro,21974071916,0404010032 - AMIGDALECTOMIA COM ADENOIDECTOMIA - PEDIATRICO,2025-11-19,Neotin Neonatal Terapia Intensiva Ltda,MARIANNA ORNELLAS SAMPAIO LEITE,Duque de Caxias,,"R$ 6.514,54","R$ 1.183,81","R$ 0,00","R$ 0,00","R$ 7.698,35"

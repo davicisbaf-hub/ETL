@@ -12,4 +12,21 @@ def transform_data(file_path):
     
     data["Data / Hora"] = data["Data / Hora"].str.split(' ').str[0]
     data["Data / Hora"] = pd.to_datetime(data["Data / Hora"], format='%d/%m/%Y')
+
+    data = data.rename(columns={
+        "Paciente": "paciente",
+        "Celular": "celular",
+        "Procedimento": "procedimento",
+        "Data / Hora": "data_hora",
+        "Prestador": "prestador",
+        "Profissional": "profissional",
+        "Município": "municipio",
+        "UBS": "ubs",
+        "Valor regional": "valor_regional",
+        "Valor SUS": "valor_sus",
+        "Contraste": "contraste",
+        "Sedação": "sedacao",
+        "Valor total": "valor_total"
+    })
+
     return data
