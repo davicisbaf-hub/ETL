@@ -1,8 +1,8 @@
 import pandas as pd
 
-def extract_data(file_path):
+def extract_data(raw_file_path):
     try:
-        data = pd.read_excel(file_path)
+        data = pd.read_excel(raw_file_path)
         return data
     except Exception as e:
         return e

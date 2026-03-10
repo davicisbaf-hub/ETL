@@ -1,10 +1,10 @@
-from extract import extract_data
+from .extract import extract_data
 import pandas as pd
 
-def transform_data(file_path):
-    data = extract_data(file_path)
+def transform_data(raw_file_path):
+    data = extract_data(raw_file_path)
     
-    data = pd.read_csv(file_path, sep=",", encoding='utf-8')
+    data = pd.read_csv(raw_file_path, sep=",", encoding='utf-8')
 
     data["Paciente"] = data["Paciente"].str.lower()
     
