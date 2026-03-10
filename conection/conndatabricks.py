@@ -29,8 +29,8 @@ cursor = connection.cursor()
 data = [tuple(x) for x in df.to_numpy()]
 
 query = """
-INSERT INTO workspace.default.processed
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+INSERT INTO workspace.default.dados
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 """
 
 cursor.executemany(query, data)
