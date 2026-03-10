@@ -13,6 +13,8 @@ def transform_data(raw_file_path):
     data["Data / Hora"] = data["Data / Hora"].str.split(' ').str[0]
     data["Data / Hora"] = pd.to_datetime(data["Data / Hora"], format='%d/%m/%Y', errors='coerce')
 
+    data = data.iloc[:-1].reset_index(drop=True)
+
     data = data.rename(columns={
         "Paciente": "paciente",
         "Celular": "celular",
