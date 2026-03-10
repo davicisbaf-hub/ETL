@@ -7,8 +7,9 @@ def transform_data(file_path):
     data = pd.read_csv(file_path, sep=",", encoding='utf-8')
 
     data["Paciente"] = data["Paciente"].str.lower()
-    data["Celular"] = data["Celular"].str.replace('-', '').str.replace(' ', '').str.replace('(', '').str.replace(')', '')
-    data["Valor SUS"] = data["Valor SUS"].str.replace('R$', '').str.replace(' ', '')
-
     
+    data["Celular"] = data["Celular"].str.replace('-', '').str.replace(' ', '').str.replace('(', '').str.replace(')', '')
+    
+    data["Data / Hora"] = data["Data / Hora"].str.split(' ').str[0]
+    data["Data / Hora"] = pd.to_datetime(data["Data / Hora"], format='%d/%m/%Y')
     return data
