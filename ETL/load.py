@@ -6,8 +6,6 @@ def load_data(processed_data, db_path):
     cursor = con.cursor()    
 
     df = pd.read_csv(processed_data, sep=",", encoding='utf-8')
-
-    input("Ao digitar 'Enter', os dados processados serão carregados para o banco de dados.")
     
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS consolidado (
