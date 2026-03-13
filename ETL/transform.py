@@ -13,7 +13,11 @@ def transform_data(raw_file_path):
     data["Data / Hora"] = data["Data / Hora"].str.split(' ').str[0]
     data["Data / Hora"] = pd.to_datetime(data["Data / Hora"], format='%d/%m/%Y', errors='coerce')
 
+    data['codigo_procedimento'] = data['Procedimento'].str.split(' - ').str[0]
     data['Procedimento'] = data['Procedimento'].str.split('- ').str[1]
+
+    data["Procedimento"] = data["Procedimento"].str.rsplit(" (", n=1).str[0]
+
 
     data["Valor regional"] = data["Valor regional"].str.replace('R$ ', '')
     data["Valor SUS"] = data["Valor SUS"].str.replace('R$ ', '')
@@ -26,6 +30,7 @@ def transform_data(raw_file_path):
     data = data.rename(columns={
         "Paciente": "paciente",
         "Celular": "celular",
+        "codigo_procedimento": "codigo_procedimento",
         "Procedimento": "procedimento",
         "Data / Hora": "data_hora",
         "Prestador": "prestador",
@@ -38,5 +43,24 @@ def transform_data(raw_file_path):
         "Sedação": "sedacao",
         "Valor total": "valor_total"
     })
+
+    data = data[
+        [
+            "paciente", 
+            "celular", 
+            "codigo_procedimento", 
+            "procedimento", 
+            "data_hora", 
+            "prestador", 
+            "profissional", 
+            "municipio", 
+            "ubs", 
+            "valor_regional", 
+            "valor_sus", 
+            "contraste", 
+            "sedacao", 
+            "valor_total"
+        ]
+    ]
 
     return data

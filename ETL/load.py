@@ -13,17 +13,18 @@ def load_data(processed_data, db_path):
         CREATE TABLE IF NOT EXISTS consolidado (
             paciente TEXT,
             celular TEXT,
+            codigo_procedimento TEXT,
             procedimento TEXT,
             data_hora DATE,
             prestador TEXT,
             profissional TEXT,
             municipio TEXT,
             ubs TEXT,
-            valor_regional REAL,
-            valor_sus REAL,
-            contraste TEXT,
-            sedacao TEXT,
-            valor_total REAL
+            valor_regional DECIMAL(10, 2),
+            valor_sus DECIMAL(10, 2),
+            contraste DECIMAL(10, 2),
+            sedacao DECIMAL(10, 2),
+            valor_total DECIMAL(10, 2)
         )
     ''')
 
