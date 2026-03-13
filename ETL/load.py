@@ -3,13 +3,14 @@ import pandas as pd
 
 def load_data(processed_data, db_path):
     con = sqlite3.connect(db_path)
-    cursor = con.cursor()
+    cursor = con.cursor()    
 
     df = pd.read_csv(processed_data, sep=",", encoding='utf-8')
 
+    input("Ao digitar 'Enter', os dados processados serão carregados para o banco de dados.")
+    
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS consolidado (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
             paciente TEXT,
             celular TEXT,
             procedimento TEXT,
@@ -26,5 +27,5 @@ def load_data(processed_data, db_path):
         )
     ''')
 
-    df.to_sql("consolidado", con, if_exists="append", index=False)
-    con.close()
+    df.to_sql("consolidado", con, if_exists="append", index=False)    
+    con.close() 

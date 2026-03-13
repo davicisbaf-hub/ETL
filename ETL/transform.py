@@ -13,6 +13,14 @@ def transform_data(raw_file_path):
     data["Data / Hora"] = data["Data / Hora"].str.split(' ').str[0]
     data["Data / Hora"] = pd.to_datetime(data["Data / Hora"], format='%d/%m/%Y', errors='coerce')
 
+    data['Procedimento'] = data['Procedimento'].str.split('- ').str[1]
+
+    data["Valor regional"] = data["Valor regional"].str.replace('R$ ', '')
+    data["Valor SUS"] = data["Valor SUS"].str.replace('R$ ', '')
+    data["Contraste"] = data["Contraste"].str.replace('R$ ', '')
+    data["Sedação"] = data["Sedação"].str.replace('R$ ', '')
+    data["Valor total"] = data["Valor total"].str.replace('R$ ', '')
+
     data = data.iloc[:-1].reset_index(drop=True)
 
     data = data.rename(columns={
