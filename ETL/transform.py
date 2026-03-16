@@ -25,9 +25,12 @@ def transform_data(raw_file_path):
     data["Sedação"] = data["Sedação"].str.replace('R$ ', '')
     data["Valor total"] = data["Valor total"].str.replace('R$ ', '')
 
+    data["emenda"] = None
+
     data = data.iloc[:-1].reset_index(drop=True)
 
     data = data.rename(columns={
+        "emenda": "emenda",
         "Paciente": "paciente",
         "Celular": "celular",
         "codigo_procedimento": "codigo_procedimento",
@@ -46,6 +49,7 @@ def transform_data(raw_file_path):
 
     data = data[
         [
+            "emenda",
             "paciente", 
             "celular", 
             "codigo_procedimento", 

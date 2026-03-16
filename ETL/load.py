@@ -9,6 +9,7 @@ def load_data(processed_data, db_path):
     
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS consolidado (
+            emenda TEXT,
             paciente TEXT,
             celular TEXT,
             codigo_procedimento TEXT,
