@@ -6,6 +6,8 @@ def transform_data(raw_file_path):
     
     data = pd.read_csv(raw_file_path, sep=",", encoding='utf-8')
 
+    data["Agenda"] = data["Agenda"].astype(str).str.split('.').str[0]
+
     data["Paciente"] = data["Paciente"].str.lower()
     
     data["Celular"] = data["Celular"].str.replace('-', '').str.replace(' ', '').str.replace('(', '').str.replace(')', '')
@@ -30,6 +32,7 @@ def transform_data(raw_file_path):
     data = data.iloc[:-1].reset_index(drop=True)
 
     data = data.rename(columns={
+        "Agenda": "codigo_agenda",
         "emenda": "emenda",
         "Paciente": "paciente",
         "Celular": "celular",
@@ -49,6 +52,7 @@ def transform_data(raw_file_path):
 
     data = data[
         [
+            "codigo_agenda",
             "emenda",
             "paciente", 
             "celular", 
