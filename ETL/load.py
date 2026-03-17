@@ -9,7 +9,7 @@ def load_data(processed_data, db_path):
     
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS consolidado (
-            codigo_agenda TEXT UNIQUE PRIMARY KEY,
+            codigo_agenda TEXT,
             emenda TEXT,
             paciente TEXT,
             celular TEXT,
