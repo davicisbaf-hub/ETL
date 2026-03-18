@@ -28,5 +28,15 @@ def load_data(processed_data, db_path):
         )
     ''')
 
-    df.to_sql("consolidado", con, if_exists="append", index=False)    
-    con.close() 
+    insert_sql = '''
+        INSERT OR IGNORE INTO consolidado (
+            codigo_agenda, emenda, paciente, celular,
+            codigo_procedimento, procedimento, data_hora,
+            prestador, profissional, municipio, ubs,
+            valor_regional, valor_sus, contraste, sedacao, valor_total
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    '''
+
+    cursor.executemany(insert_sql, df.values.tolist())
+    con.commit()
+    con.close()
